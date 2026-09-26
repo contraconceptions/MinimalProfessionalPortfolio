@@ -1,0 +1,129 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Geist:Bold';
+  src: url('https://static.figma.com/font/Geist_wght__1') format('woff2');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Geist:Medium';
+  src: url('https://static.figma.com/font/Geist_wght__1') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Geist:Regular';
+  src: url('https://static.figma.com/font/Geist_wght__1') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Geist:SemiBold';
+  src: url('https://static.figma.com/font/Geist_wght__1') format('woff2');
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Outfit:Bold';
+  src: url('https://static.figma.com/font/Outfit_wght__2') format('woff2');
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Outfit:ExtraBold';
+  src: url('https://static.figma.com/font/Outfit_wght__2') format('woff2');
+  font-style: normal;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Outfit:Medium';
+  src: url('https://static.figma.com/font/Outfit_wght__2') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Outfit:Regular';
+  src: url('https://static.figma.com/font/Outfit_wght__2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Outfit:SemiBold';
+  src: url('https://static.figma.com/font/Outfit_wght__2') format('woff2');
+  font-style: normal;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono:Medium';
+  src: url('https://static.figma.com/font/JetBrainsMono_wght__1') format('woff2');
+  font-style: normal;
+  font-weight: 500;
+}
+
+:root {
+  --background: #0a0a0f;
+  --foreground: #ffffff;
+  --card: #111118;
+  --card-lift: #1a1a24;
+  --primary: #00f0ff;
+  --secondary: #ff00e5;
+  --success: #39ff14;
+  --warning: #ffb800;
+  --muted: #a0a0b0;
+  --muted-dim: #606070;
+  --border: rgba(255,255,255,0.12);
+  --border-primary: rgba(0,240,255,0.5);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Geist:Regular', system-ui, sans-serif;
+  font-weight: 400;
+}
+
+/* Hide scrollbar but allow scroll */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(0,240,255,0.2); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(0,240,255,0.4); }
+
+/* Animated glow pulse for status dot */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Scanline texture */
+.scanlines::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.03) 2px,
+    rgba(0,0,0,0.03) 4px
+  );
+  pointer-events: none;
+  z-index: 0;
+}

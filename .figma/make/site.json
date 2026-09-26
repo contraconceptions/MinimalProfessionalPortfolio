@@ -1,0 +1,10 @@
+{
+  "description": "Showcase coding projects and professional bio on a sleek one-page portfolio with an integrated contact form for easy client communication.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
